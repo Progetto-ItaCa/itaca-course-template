@@ -1,0 +1,118 @@
+\documentclass{amsart}
+\usepackage{itaca}
+
+\usepackage{minted, booktabs}\usemintedstyle{manni}
+
+\begin{document}
+La formula magica che permette di definire macro per tutti gli alfabeti in un attimo:
+\begin{minted}[fontsize=\footnotesize]{latex}
+% magia di latex3
+\ExplSyntaxOn
+\NewDocumentCommand{\makeabbrev}{mmm}
+  {
+   \yoruk_makeabbrev:nnn { #1 } { #2 } { #3 }
+  }
+
+\cs_new_protected:Npn \yoruk_makeabbrev:nnn #1 #2 #3
+  {
+   \clist_map_inline:nn { #3 }
+    {
+     \cs_new_protected:cpn { #2 } { #1 { ##1 } }
+    }
+  }
+\ExplSyntaxOff
+
+\DeclareMathAlphabet{\mybb}{U}{BOONDOX-ds}{m}{n}
+
+\makeabbrev{\textbf}{bf#1}{
+  a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,q,r,t,u,v,w,x,y,z,
+  A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,R,T,U,V,W,X,Y,Z }
+\makeabbrev{\boldsymbol}{bs#1}{ <...> }
+\makeabbrev{\mathsf}{sf#1}{ <...> }
+\makeabbrev{\mathfrak}{fk#1}{ <...> }
+\makeabbrev{\mathcal}{cl#1}{ <...> }
+\makeabbrev{\mathbb}{bb#1}{ <...> }
+\makeabbrev{\mybb}{mb#1}{ <...> }
+\makeabbrev{\underline}{ul#1}{ <...> }
+\makeabbrev{\overline}{ol#1}{ <...> }
+  \end{minted}
+In questo modo, si ha che
+\begin{table}[h]
+  \begin{center}
+    \begin{tabular}{lcr}
+      \verb|\bfA| \dots \verb|\bfZ|   & results in & $\bfA \dots \bfZ$ \\ \midrule
+      \verb|\bsA| \dots \verb|\bsZ|   & results in & $\bsA \dots \bsZ$ \\ \midrule
+      \verb|\sfA| \dots \verb|\fZ|   & results in & $\sfA \dots \sfZ$ \\ \midrule
+      \verb|\fkA| \dots \verb|\fkZ|   & results in & $\fkA \dots \fkZ$ \\ \midrule
+      \verb|\clA| \dots \verb|\clZ|  & results in & $\clA \dots \clZ$ \\ \midrule
+      \verb|\bbA| \dots \verb|\bbZ| & results in & $\bbA \dots \bbZ$ \\ \midrule
+      \verb|\mbA| \dots \verb|\mbZ| & results in & $\mbA \dots \mbZ$ \\ \midrule
+      \verb|\ulA| \dots \verb|\ulZ| & results in & $\ulA \dots \ulZ$ \\ \midrule
+      \verb|\olA| \dots \verb|\olZ| & results in & $\olA \dots \olZ$ \\ \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+\begin{minted}[fontsize=\small]{latex}
+  \newlength{\seplen}
+  \setlength{\seplen}{5pt}
+  \newlength{\sepwid}
+  \setlength{\sepwid}{.4pt}
+  \def\firstblank{\,\rule{\seplen}{\sepwid}\,}
+  \def\secondblank{\firstblank\llap{\raisebox{2pt}{\firstblank}}}
+\end{minted}
+\section*{first e secondblank}
+Questo serve a disegnare i `blank' o `waiting for':
+\begin{minted}[fontsize=\small]{latex}
+  F(\firstblank, \secondblank) : \clC^\op \times \clC \to \clD
+\end{minted}
+\[F(\firstblank, \secondblank) : \clC^\op \times \clC \to \clD\notag\]
+\section*{enumtag}
+Questo serve a generare enumerate lievemente più belli:
+\begin{minted}[fontsize=\small]{latex}
+  \DeclareDocumentEnvironment{enumtag}{m}{
+    \begin{enumerate}
+      [ label = \textsc{#1}\oldstylenums{\arabic*}),
+        ref   = \textsc{#1}\oldstylenums{\arabic*}
+      ] }{ \end{enumerate} }
+      %===
+\begin{enumtag}{e}
+  \item uno
+  \item due
+  \item tre
+\end{enumtag}       
+    \end{minted}
+\begin{enumtag}{e}
+  \item uno
+  \item due
+  \item tre
+\end{enumtag}
+\section*{smallmatrici}
+Notare il diverso comportamento di \verb|\var| a seconda della presenza di un argomento opzionale:
+\begin{minted}[fontsize=\small]{latex}
+  \newenvironment{xsmallmatrix}[1]
+    {\renewcommand\thickspace{\kern#1}\smallmatrix}
+    {\endsmallmatrix}
+
+  \NewDocumentCommand{\var}{o m m}{
+    \IfNoValueTF{#1}{
+      \left[
+        \begin{smallmatrix}
+          #2 \\
+          \downarrow \\
+          #3
+        \end{smallmatrix}\right]}
+    {
+      \left[
+        \begin{xsmallmatrix}{0em}
+          & #2 \\
+          #1 & \downarrow \\
+          & #3
+        \end{xsmallmatrix}\right]
+    }
+  }
+\end{minted}
+\[\var[f]{A}{B} \qquad \var{A}{B}\notag\]
+\begin{minted}[fontsize=\footnotesize]{latex}
+\var[f]{A}{B} \qquad \var{A}{B}
+\end{minted}
+\end{document}
