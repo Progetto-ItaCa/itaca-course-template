@@ -2,11 +2,22 @@
 
 \usetheme{metropolis}
 
+\usepackage{eso-pic}
+
+\beamertemplatenavigationsymbolsempty
+
+\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
+\put(\LenToUnit{0.95\paperwidth},\LenToUnit{0.95\paperheight}){#1}}}
+\AddToShipoutPictureFG{
+  \AtPagemyUpperLeft{{\includegraphics[width=.5cm,keepaspectratio]{itacaprova.pdf}}}
+}
+
 \author{ItaCa}
 \title{Teoria delle categorie}
 \date{}
 
 \begin{document}
+\thispagestyle{empty}
 \begin{frame}
 \maketitle
 \end{frame}
