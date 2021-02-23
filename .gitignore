@@ -12,6 +12,7 @@
 *.cb2
 .*.lb
 !logo.pdf
+!logo2.pdf
 ## Intermediate documents:
 *.dvi
 *.xdv
