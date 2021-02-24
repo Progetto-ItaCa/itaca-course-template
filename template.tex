@@ -12,6 +12,13 @@
   \AtPagemyUpperLeft{{\includegraphics[width=.5cm,keepaspectratio]{logo.pdf}}}
 }
 
+\definecolor{bleakYellow}{HTML}{D65D0E}%{F0DB4F}
+\definecolor{solarBack}{HTML}{F9F5D7}
+\definecolor{solarFont}{HTML}{282828}
+\setbeamercolor{background canvas}{bg=solarBack}
+\setbeamercolor{alerted text}{fg=bleakYellow}
+\setbeamercolor{normal text}{fg=solarFont}
+
 \author{ItaCa}
 \title{Teoria delle categorie}
 \date{}
@@ -23,11 +30,11 @@
 \end{frame}
 
 \begin{frame}
-
+	Le lettere MCV, perversamente ripetute dalla prima all'ultima pagina.
 \end{frame}
 \foreach \i in {1,...,20}{
 		\begin{frame}
-
+			\foreach \j in {1,...,10}{MCV}
 		\end{frame}
 	}
 \end{document}
