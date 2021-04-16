@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{\PYGZbs{}newlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}seplen}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}seplen}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}5pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}newlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}sepwid}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}setlength}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}sepwid}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}.4pt\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}def\PYGZbs{}firstblank}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{},\PYGZbs{}rule}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}seplen}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}sepwid}\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{},}\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}def\PYGZbs{}secondblank}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}firstblank\PYGZbs{}llap}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}raisebox}\PYG{n+nb}{\PYGZob{}}2pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}firstblank}\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}}
+\end{Verbatim}

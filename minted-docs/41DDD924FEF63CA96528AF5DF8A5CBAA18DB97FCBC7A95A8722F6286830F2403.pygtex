@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{\PYGZbs{}newenvironment}\PYG{n+nb}{\PYGZob{}}xsmallmatrix\PYG{n+nb}{\PYGZcb{}}[1]
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}renewcommand\PYGZbs{}thickspace}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}kern}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}smallmatrix}\PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}endsmallmatrix}\PYG{n+nb}{\PYGZcb{}}
+
+  \PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}var}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}o m m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+    \PYG{k}{\PYGZbs{}IfNoValueTF}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+      \PYG{k}{\PYGZbs{}left}[
+        \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}smallmatrix\PYG{n+nb}{\PYGZcb{}}
+          \PYGZsh{}2 \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          \PYG{k}{\PYGZbs{}downarrow} \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          \PYGZsh{}3
+        \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}smallmatrix\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}right}]\PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZob{}}
+      \PYG{k}{\PYGZbs{}left}[
+        \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}xsmallmatrix\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0em\PYG{n+nb}{\PYGZcb{}}
+          \PYG{n+nb}{\PYGZam{}} \PYGZsh{}2 \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          \PYGZsh{}1 \PYG{n+nb}{\PYGZam{}} \PYG{k}{\PYGZbs{}downarrow} \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          \PYG{n+nb}{\PYGZam{}} \PYGZsh{}3
+        \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}xsmallmatrix\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}right}]
+    \PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

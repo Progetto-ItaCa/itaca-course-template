@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{} magia di latex3}
+\PYG{k}{\PYGZbs{}ExplSyntaxOn}
+\PYG{k}{\PYGZbs{}NewDocumentCommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}mmm\PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZob{}}
+   \PYG{k}{\PYGZbs{}yoruk}\PYG{n+nb}{\PYGZus{}}makeabbrev:nnn \PYG{n+nb}{\PYGZob{}} \PYGZsh{}1 \PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZob{}} \PYGZsh{}2 \PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZob{}} \PYGZsh{}3 \PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}cs}\PYG{n+nb}{\PYGZus{}}new\PYG{n+nb}{\PYGZus{}}protected:Npn \PYG{k}{\PYGZbs{}yoruk}\PYG{n+nb}{\PYGZus{}}makeabbrev:nnn \PYGZsh{}1 \PYGZsh{}2 \PYGZsh{}3
+  \PYG{n+nb}{\PYGZob{}}
+   \PYG{k}{\PYGZbs{}clist}\PYG{n+nb}{\PYGZus{}}map\PYG{n+nb}{\PYGZus{}}inline:nn \PYG{n+nb}{\PYGZob{}} \PYGZsh{}3 \PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZob{}}
+     \PYG{k}{\PYGZbs{}cs}\PYG{n+nb}{\PYGZus{}}new\PYG{n+nb}{\PYGZus{}}protected:cpn \PYG{n+nb}{\PYGZob{}} \PYGZsh{}2 \PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZob{}} \PYGZsh{}1 \PYG{n+nb}{\PYGZob{}} \PYGZsh{}\PYGZsh{}1 \PYG{n+nb}{\PYGZcb{}} \PYG{n+nb}{\PYGZcb{}}
+    \PYG{n+nb}{\PYGZcb{}}
+  \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}ExplSyntaxOff}
+
+\PYG{k}{\PYGZbs{}DeclareMathAlphabet}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}mybb}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}U\PYG{n+nb}{\PYGZcb{}\PYGZob{}}BOONDOX\PYGZhy{}ds\PYG{n+nb}{\PYGZcb{}\PYGZob{}}m\PYG{n+nb}{\PYGZcb{}\PYGZob{}}n\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}textbf}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bf\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}}
+  a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,q,r,t,u,v,w,x,y,z,
+  A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,R,T,U,V,W,X,Y,Z \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}boldsymbol}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bs\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}mathsf}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}sf\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}mathfrak}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}fk\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}mathcal}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}cl\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}mathbb}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}bb\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}mybb}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}mb\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}underline}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}ul\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}makeabbrev}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}overline}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}ol\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZob{}} \PYGZlt{}...\PYGZgt{} \PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}
